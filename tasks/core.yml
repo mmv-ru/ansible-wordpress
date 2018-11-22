@@ -14,6 +14,9 @@
     wp-cli core download
     --allow-root --no-color --path='{{ item.item.path }}'
     --locale='{{ item.item.locale | default('en_US') }}'
+    {% if item.item.version is defined %}
+    --version='{{ item.item.version }}'
+    {% endif %}
   with_items: "{{ _check_download.results | default([]) }}"
   when: item.rc != 0
   tags:

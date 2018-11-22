@@ -29,6 +29,7 @@ This role assumes a working virtual host (that handles `wordpress_url`).
 * `wordpress_installs.{n}.group`: [default: `owner`, `www-data`]: The name of the group that should own the install
 * `wordpress_installs.{n}.url`: [required]: Wordpress url
 * `wordpress_installs.{n}.title`: [required]: Wordpress title
+* `wordpress_installs.{n}.version`: [default: 'latest', optional]: Wordpress version, latest or nightly
 * `wordpress_installs.{n}.admin_name`: [default: `admin`, optional]: Wordpress admin (user)name
 * `wordpress_installs.{n}.admin_email`: [required]: Wordpress admin email address
 * `wordpress_installs.{n}.admin_password`: [required]: Wordpress admin password (**make sure to change**)
